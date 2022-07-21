@@ -6,10 +6,10 @@
 Aplicação em conjunto com sitema VB¹ e inicialização em Batchfile² para conversão 
 de arquivos HTML em PDF.
 </p>
-
+</br>
 <p align="center">
 ¹Cria .html dentro da pasta "arquivos"
-</p></br>
+</p>
 <p align="center">
 ²Facilitar a compilação para outros sistemas ou Tarefas do Windows.
 </p>
