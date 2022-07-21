@@ -1,21 +1,25 @@
 const fs = require('fs');
-const htmltopdf = require('html-pdf-node');
+const pdf = require('html-pdf');
+
 
 try {
-  fs.readdir('../ConvertPDF/arquivos', (err, data) => {
+  fs.readdir('../C-HTML/arquivos', (err, data) => {
     if(err){
       console.log(err);
     }
 
-    const block = fs.readFileSync(`../ConvertPDF/arquivos/${data[0]}`, 'utf8');
+    const block = fs.readFileSync(`../C-HTML/arquivos/${data[0]}`, 'utf8');
 
-    let options = { format: 'A4' };
+    var options = { format: 'Letter' };
 
-    let file = { content: block };
-    htmltopdf.generatePdf(file, options).then(pdfBuffer => {
+    pdf.create(block, options).toBuffer((err, pdfBuffer) => {
+      if(err){
+        console.log(err);
+      }
+
       fileName = data[0].replace('.htm', '.pdf');
       fs.writeFileSync(fileName, pdfBuffer);
-      fs.rename(`../ConvertPDF/${fileName}`, `../ConvertPDF/arquivos/${fileName}`, (err) => {
+      fs.rename(`../C-HTML/${fileName}`, `../C-HTML/arquivos/${fileName}`, (err) => {
         if(err){
           console.log(err);
         }
