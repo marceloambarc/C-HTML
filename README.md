@@ -3,16 +3,22 @@
 </h1>
 
 <p align="center">
-Aplicação em conjunto com sitema VB e inicialização em Batchfile para conversão 
+Aplicação em conjunto com sitema VB¹ e inicialização em Batchfile² para conversão 
 de arquivos HTML em PDF.
+
+¹Cria .html dentro da pasta "arquivos"
+²Facilitar a compilação para outros sistemas ou Tarefas do Windows.
 </p>
 
-#### Project setup
+#### Setup
 ```
 npm install
 ```
 
-### Compiles for development
+#### Compilação para desenvolvimento
 ```
 npm run dev
 ```
+<p align="center">
+Arquivo .bat pode ser colocado em qualquer local de seu sisteme e ao inicializar faz a compilação para deselvolvimento.
+</p>
