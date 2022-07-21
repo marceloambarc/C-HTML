@@ -24,5 +24,5 @@ npm install
 npm run dev
 ```
 <p align="center">
-Arquivo .bat pode ser colocado em qualquer local de seu sisteme e ao inicializar faz a compilação para deselvolvimento.
+Arquivo .bat pode ser colocado em qualquer local de sistema e ao inicializar realiza a compilação.
 </p>
