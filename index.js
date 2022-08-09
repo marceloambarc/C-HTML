@@ -10,7 +10,7 @@ try {
 
     const block = fs.readFileSync(`../C-HTML/arquivos/${data[0]}`, 'utf8');
 
-    var options = { format: 'Letter' };
+    var options = { format: 'A4', orientation: "landscape" };
 
     pdf.create(block, options).toBuffer((err, pdfBuffer) => {
       if(err){
